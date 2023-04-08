@@ -1,0 +1,67 @@
+{
+    "events": [
+        {
+            "title": "Евгений Чебатков1",
+            "date": "25 апреля, 19:00",
+            "place": "Зимний театр",
+            "picture": [
+                {
+                    "src": "/images/image2.jpg"
+                }
+            ]
+        },
+        {
+            "title": "Евгений Чебатков1",
+            "date": "25 апреля, 19:00",
+            "place": "Зимний театр",
+            "picture": [
+                {
+                    "src": "/images/image2.jpg"
+                }
+            ]
+        },
+        {
+            "title": "Concord Orchestra. Симфоническое рок-шоу «Рождение мира»",
+            "date": "25 апреля, 19:00",
+            "place": "Зимний театр",
+            "picture": [
+                {
+                    "src": "/images/image2.jpg"
+                },
+                {
+                    "src": "/images/image1-1920.jpg"
+                }
+            ]
+        },
+        {
+            "title": "Евгений Чебатков1",
+            "date": "25 апреля, 19:00",
+            "place": "Зимний театр",
+            "picture": [
+                {
+                    "src": "/images/image2.jpg"
+                }
+            ]
+        },
+        {
+            "title": "Евгений Чебатков1",
+            "date": "25 апреля, 19:00",
+            "place": "Зимний театр",
+            "picture": [
+                {
+                    "src": "/images/image2.jpg"
+                }
+            ]
+        },
+        {
+            "title": "Евгений Чебатков1",
+            "date": "25 апреля, 19:00",
+            "place": "Зимний театр",
+            "picture": [
+                {
+                    "src": "/images/image2.jpg"
+                }
+            ]
+        }
+    ]
+}

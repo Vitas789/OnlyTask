@@ -9,3 +9,27 @@
 }
 
 */
+
+@font-face {
+    font-family: 'GraphikLCG';
+    src: url('/fonts/GraphikLCG-Regular.ttf');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GraphikLCG';
+    src: url('/fonts/GraphikLCG-Medium.ttf');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GraphikLCG';
+    src: url('/fonts/GraphikLCG-Bold.ttf');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}

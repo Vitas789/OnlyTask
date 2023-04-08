@@ -7,7 +7,8 @@ const variables = {
     },
     videoRatio: (9 / 16) * 100,
     fonts: {
-        default: 'Arial'
+        default: 'Arial',
+        graphikLCG: 'GraphikLCG'
     }
 };
 

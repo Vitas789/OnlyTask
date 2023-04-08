@@ -22,6 +22,34 @@ export interface BasePageProps {
     sandwich: SandwichProps;
 }
 
+export interface MainLeadProps {
+    slides: {
+        title: string;
+        description: string;
+        date: string;
+        place: string;
+        picture: {
+            src: string;
+        }[];
+    }[];
+}
+
+export interface IAllEventsProps {
+    events: {
+        title: string;
+        date: string;
+        place: string;
+        picture: {
+            src: string;
+        }[];
+    }[];
+}
+
+export interface ITheme {
+    backgroundColor: string;
+    color: string;
+}
+
 /**
  * @description Базовый интерфейс для компонентов, которые предполагают стилизацию с помощью styled-components
  */

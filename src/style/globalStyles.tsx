@@ -1,8 +1,9 @@
 import { createGlobalStyle } from 'styled-components';
 import variables from './variables';
 import { color } from './mixins';
+import { ITheme } from '@/interfaces';
 
-const GlobalStyle = createGlobalStyle`
+const GlobalStyle = createGlobalStyle<{ theme: ITheme }>`
     * {
         box-sizing: border-box;
     }
@@ -13,7 +14,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     html {
-        font-family: ${variables.fonts.default};
+        font-family: ${variables.fonts.graphikLCG};
         scrollbar-gutter: stable;
         color: ${color('black')};
     }
@@ -23,9 +24,12 @@ const GlobalStyle = createGlobalStyle`
         margin: 0;
         overscroll-behavior: none;
         overflow: auto;
+        transition: 0.3s all ease;
+        background-color: ${(props) => props.theme.backgroundColor};
     }
 
-    h1, h2, h3, h4, h5, span, a {
+
+    h1, h2, h3, h4, h5, span, a, p {
         font-size: inherit;
         font-weight: inherit;
         line-height: inherit;

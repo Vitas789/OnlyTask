@@ -2,7 +2,7 @@ import breakpoints, { Breakpoints } from './breakpoints';
 import variables, { Offset, FontFamily } from './variables';
 import colors, { Colors } from './colors';
 import typography, { Typography } from './typography';
-import {css, FlattenSimpleInterpolation} from 'styled-components';
+import { css, FlattenSimpleInterpolation } from 'styled-components';
 import { rgba } from 'polished';
 
 /**

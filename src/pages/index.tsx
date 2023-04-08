@@ -1,27 +1,29 @@
 import { GetStaticProps } from 'next';
 import React from 'react';
-import Only from '@/icons/only.svg';
 import Layout from '@/components/common/Layout/Layout';
-import { BasePageProps } from '@/interfaces';
+import { IAllEventsProps, BasePageProps, MainLeadProps } from '@/interfaces';
+import { getAllEvents, getMainLead } from '@/lib/api';
+import MainLead from '@/components/sections/MainLead/MainLead';
+import AllEvents from '@/components/sections/AllEvents/AllEvents';
 
 interface IndexProps extends BasePageProps {
-    /* Page props*/
+    mainLead?: MainLeadProps;
+    allEvents?: IAllEventsProps;
 }
 
 const Index: React.FC<IndexProps> = (props) => {
     return (
         <Layout meta={props.meta} header={props.header} sandwich={props.sandwich}>
-            <h1 style={{ textAlign: 'center', marginTop: '10rem' }}>
-                Hello, World!
-                <Only style={{ marginLeft: '1rem', height: '15px', verticalAlign: 'middle' }} />
-            </h1>
-
-            {/* Page body */}
+            <MainLead {...props.mainLead} />
+            <AllEvents {...props.allEvents} />
         </Layout>
     );
 };
 
 export const getStaticProps: GetStaticProps<IndexProps> = async () => {
+    const mainLead = await getMainLead();
+    const allEvents = await getAllEvents();
+
     return {
         props: {
             meta: {
@@ -30,7 +32,9 @@ export const getStaticProps: GetStaticProps<IndexProps> = async () => {
                 keywords: 'keywords'
             },
             header: {},
-            sandwich: {}
+            sandwich: {},
+            mainLead,
+            allEvents
         },
         revalidate: 1
     };
