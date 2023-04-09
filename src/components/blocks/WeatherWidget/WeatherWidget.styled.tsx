@@ -11,19 +11,39 @@ export const Container = styled.div`
     background: ${(props) => props.theme.widgetsBackground};
     border-radius: 16px;
     padding: 20px;
+
+    ${mediaBreakpointDown('fhd')} {
+        padding: 12px;
+        margin-bottom: 12px;
+    }
+`;
+
+export const WeatherLoaderContainer = styled.div`
+    position: relative;
+    background: ${(props) => props.theme.widgetsBackground};
+    display: flex;
+    border-radius: 16px;
+    padding: 20px;
+    width: 370px;
     height: 439px;
 
     ${mediaBreakpointDown('fhd')} {
         padding: 12px;
         margin-bottom: 12px;
+    }
+
+    ${mediaBreakpointDown('fhd')} {
+        width: 249px;
         height: 304px;
     }
 
     ${mediaBreakpointDown('xl')} {
+        width: 159px;
         height: 291px;
     }
 
     ${mediaBreakpointDown('md')} {
+        width: 335px;
         height: 172px;
     }
 `;

@@ -30,7 +30,7 @@ const EventCard: React.FC<EventCardProps> = ({ title, description, date, place, 
                         navigation={false}
                         swiperOptions={{
                             autoplay: {
-                                delay: 3000
+                                delay:  4000
                             }
                         }}>
                         {picture.map((item, index) => (

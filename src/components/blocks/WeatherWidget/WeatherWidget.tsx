@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Container, WeatherLoader, WeatherBody, WeatherFooter, WeatherHeader } from './WeatherWidget.styled';
+import { Container, WeatherLoader, WeatherBody, WeatherFooter, WeatherHeader, WeatherLoaderContainer } from './WeatherWidget.styled';
 import LocationArrow from '../../../icons/location-arrow.svg';
 import RainIcon from '../../../icons/rainy.svg';
 import CloudIcon from '../../../icons/cloud.svg';
@@ -28,9 +28,9 @@ const WeatherWidget: React.FC<WeatherWidgetProps> = () => {
 
     if (isLoading)
         return (
-            <Container>
+            <WeatherLoaderContainer>
                 <WeatherLoader />
-            </Container>
+            </WeatherLoaderContainer>
         );
 
     return (

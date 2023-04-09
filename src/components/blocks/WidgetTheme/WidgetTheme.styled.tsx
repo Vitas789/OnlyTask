@@ -55,22 +55,24 @@ export const WidgetThemeSwitcher = styled.div`
 
     & > div {
         position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         width: 54px;
         height: 28px;
         border-radius: 555px;
-        padding: 2px;
+        padding-left: 2px;
         border: 2px solid ${(props) => (props.theme === 'light' ? 'rgba(35, 35, 35, 0.2)' : 'rgba(130, 130, 130, 0.2)')};
 
         ${mediaBreakpointDown('fhd')} {
             width: 34px;
             height: 18px;
-            padding: 1px;
+            padding-left: 1px;
         }
 
         ${mediaBreakpointDown('xl')} {
             width: 26px;
             height: 14px;
-            padding: 1px;
         }
     }
 
