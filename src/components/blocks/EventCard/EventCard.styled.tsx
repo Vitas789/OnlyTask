@@ -155,7 +155,11 @@ export const EventCardBody = styled.div`
         font-weight: 700;
         margin-bottom: 20px;
 
-        ${mediaBreakpointDown('md')} {
+        ${mediaBreakpointDown('fhd')} {
+            margin-bottom: 12px;
+        }
+
+        ${mediaBreakpointDown('xl')} {
             margin-bottom: 8px;
         }
     }
@@ -179,12 +183,12 @@ export const EventCardBody = styled.div`
         padding: 20px 0 0 0;
         color: ${(props) => props.theme.color};
 
-        ${mediaBreakpointDown('xl')} {
-            padding-top: 8px;
-        }
-
         ${mediaBreakpointDown('fhd')} {
             padding-top: 12px;
+        }
+
+        ${mediaBreakpointDown('xl')} {
+            padding-top: 8px;
         }
 
         & div {
@@ -225,7 +229,11 @@ export const EventCardBody = styled.div`
 export const EventCardPlace = styled.div`
     margin-top: 20px;
 
-    ${mediaBreakpointDown('md')} {
+    ${mediaBreakpointDown('fhd')} {
+        margin-top: 12px;
+    }
+
+    ${mediaBreakpointDown('xl')} {
         margin-top: 8px;
     }
 

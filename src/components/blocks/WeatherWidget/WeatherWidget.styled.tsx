@@ -124,6 +124,10 @@ export const WeatherBody = styled.div`
         margin-bottom: 50px;
     }
 
+    ${mediaBreakpointDown('xl')} {
+        margin-bottom: 15px;
+    }
+
     ${mediaBreakpointDown('md')} {
         flex-direction: row;
     }
@@ -181,10 +185,6 @@ export const WeatherBody = styled.div`
             font-weight: 600;
             color: ${(props) => props.theme.color};
         }
-    }
-
-    ${mediaBreakpointDown('xl')} {
-        margin-bottom: 29px;
     }
 `;
 
