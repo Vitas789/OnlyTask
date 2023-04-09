@@ -3,6 +3,47 @@ import Image from '@/components/common/Image/Image';
 import { color, font, mediaBreakpointDown } from '@/style/mixins';
 import CopyLink from '@/components/common/CopyLink/CopyLink';
 
+export const Container = styled.div`
+    position: relative;
+    width: 100%;
+    height: 560px;
+
+    ${mediaBreakpointDown('fhd')} {
+        height: 380px;
+    }
+
+    ${mediaBreakpointDown('xl')} {
+        height: 360px;
+    }
+
+    &.small {
+        width: 507px;
+        position: relative;
+        height: fit-content;
+
+        ${mediaBreakpointDown('fhd')} {
+            width: 341px;
+        }
+
+        ${mediaBreakpointDown('xl')} {
+            width: 338px;
+        }
+
+        .swiper-wrapper {
+            width: 100%;
+            height: 300px;
+
+            ${mediaBreakpointDown('fhd')} {
+                height: 200px;
+            }
+
+            ${mediaBreakpointDown('xl')} {
+                height: 220px;
+            }
+        }
+    }
+`;
+
 export const EventCardCopyLink = styled(CopyLink)`
     top: 40px;
     left: 40px;
@@ -15,6 +56,11 @@ export const EventCardCopyLink = styled(CopyLink)`
     ${mediaBreakpointDown('xl')} {
         top: 20px;
         left: 20px;
+    }
+
+    ${mediaBreakpointDown('md')} {
+        top: 12px;
+        left: 12px;
     }
 
     &.small {
@@ -92,15 +138,40 @@ export const EventCardBody = styled.div`
     padding: 40px;
     color: ${color('white')};
 
+    ${mediaBreakpointDown('fhd')} {
+        padding: 28px;
+    }
+
+    ${mediaBreakpointDown('xl')} {
+        padding: 20px;
+    }
+
+    ${mediaBreakpointDown('md')} {
+        padding: 12px;
+    }
+
     p {
         ${font('text1')}
         font-weight: 700;
         margin-bottom: 20px;
+
+        ${mediaBreakpointDown('md')} {
+            margin-bottom: 8px;
+        }
     }
 
     span {
         ${font('text2')}
         font-weight: 400;
+    }
+
+    & > div {
+        & > span {
+            ${mediaBreakpointDown('md')} {
+                display: block;
+                max-width: 200px;
+            }
+        }
     }
 
     &.small {
@@ -135,7 +206,6 @@ export const EventCardBody = styled.div`
 
         span {
             ${font('text4')}
-            opacity: 0.6;
 
             &:first-of-type {
                 margin-right: 50px;
@@ -154,10 +224,20 @@ export const EventCardBody = styled.div`
 
 export const EventCardPlace = styled.div`
     margin-top: 20px;
+
+    ${mediaBreakpointDown('md')} {
+        margin-top: 8px;
+    }
+
     span {
         position: relative;
+
         &:first-of-type {
             margin-right: 50px;
+
+            ${mediaBreakpointDown('md')} {
+                margin-right: 20px;
+            }
 
             &::after {
                 content: '';
@@ -170,51 +250,31 @@ export const EventCardPlace = styled.div`
                 background-color: ${color('white')};
 
                 ${mediaBreakpointDown('fhd')} {
+                    width: 4px;
+                    height: 4px;
                     top: 20%;
                     right: -16.5px;
+                }
+
+                ${mediaBreakpointDown('md')} {
+                    width: 3px;
+                    height: 3px;
+                    top: 24%;
+                    right: -12px;
                 }
             }
         }
     }
-`;
-
-export const Container = styled.div`
-    position: relative;
-    width: 100%;
-    height: 560px;
-
-    ${mediaBreakpointDown('fhd')} {
-        height: 380px;
-    }
-
-    ${mediaBreakpointDown('xl')} {
-        height: 360px;
-    }
 
     &.small {
-        width: 507px;
-        position: relative;
-        height: fit-content;
+        max-width: 470px;
+        opacity: 0.6;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
 
         ${mediaBreakpointDown('fhd')} {
-            width: 341px;
-        }
-
-        ${mediaBreakpointDown('xl')} {
-            width: 338px;
-        }
-
-        .swiper-wrapper {
-            width: 100%;
-            height: 300px;
-
-            ${mediaBreakpointDown('fhd')} {
-                height: 200px;
-            }
-
-            ${mediaBreakpointDown('xl')} {
-                height: 220px;
-            }
+            max-width: 313px;
         }
     }
 `;

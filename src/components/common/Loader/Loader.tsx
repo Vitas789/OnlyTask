@@ -1,13 +1,14 @@
 import React from 'react';
 import { Container } from './Loader.styled';
+import { BaseUI } from '@/interfaces';
 
-interface LoaderProps {
-    /* Component props */
+export interface LoaderProps extends BaseUI {
+
 }
 
-const Loader: React.FC<LoaderProps> = () => {
+const Loader: React.FC<LoaderProps> = ({ className }) => {
     return (
-        <Container>
+        <Container className={className}>
             <div className="lds-ring">
                 <div></div>
                 <div></div>

@@ -3,7 +3,7 @@ import CopyIcon from '../../../icons/copy-link.svg';
 import { BaseUI } from '@/interfaces';
 
 export interface CopyLinkProps extends BaseUI {
-    onClickFunc?: any;
+    onClickFunc?: () => void;
 }
 
 const CopyLink: React.FC<CopyLinkProps> = ({ onClickFunc, className }) => {

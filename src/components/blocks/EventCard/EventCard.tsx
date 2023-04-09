@@ -1,10 +1,10 @@
 import React from 'react';
 import { EventCardBg, EventCardBgImg, EventCardBody, Container, EventCardPlace, EventCardCopyLink } from './EventCard.styled';
-import { MainLeadProps } from '@/interfaces';
+import { IMainLeadProps } from '@/interfaces';
 import { SwiperSlide } from 'swiper/react';
 import Slider from '@/components/common/Slider/Slider';
 
-interface EventCardProps extends MainLeadProps {
+interface EventCardProps extends IMainLeadProps {
     title: string;
     description?: string;
     date: string;
@@ -32,8 +32,7 @@ const EventCard: React.FC<EventCardProps> = ({ title, description, date, place, 
                             autoplay: {
                                 delay: 3000
                             }
-                        }}
-                    >
+                        }}>
                         {picture.map((item, index) => (
                             <SwiperSlide key={index}>
                                 <EventCardBgImg src={item.src} alt="" layout="fill" objectFit="cover" />
@@ -47,7 +46,7 @@ const EventCard: React.FC<EventCardProps> = ({ title, description, date, place, 
                     {!type && <EventCardCopyLink onClickFunc={copyToClipboard} className={type || ''} />}
                     <p>{title}</p>
                     {description && <span>{description}</span>}
-                    <EventCardPlace>
+                    <EventCardPlace className={type || ''}>
                         <span>{date}</span>
                         <span>{place}</span>
                     </EventCardPlace>

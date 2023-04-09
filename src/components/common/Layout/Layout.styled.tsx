@@ -13,4 +13,8 @@ export const Container = styled.main`
     ${mediaBreakpointDown('xl')} {
         max-width: 700px;
     }
+
+    ${mediaBreakpointDown('md')} {
+        max-width: 335px;
+    }
 `;

@@ -14,10 +14,10 @@ const SWIPER_OPTIONS: SwiperOptions = {
     speed: 800,
     keyboard: false,
     loop: true,
-    spaceBetween: 25
-    // autoplay: {
-    //     disableOnInteraction: false
-    // }
+    spaceBetween: 25,
+    autoplay: {
+        disableOnInteraction: false
+    }
 };
 
 SwiperCore.use([Controller, Keyboard, Autoplay]);

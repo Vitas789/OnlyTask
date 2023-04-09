@@ -1,3 +1,4 @@
+import Loader from '@/components/common/Loader/Loader';
 import { font, mediaBreakpointDown } from '@/style/mixins';
 import styled from 'styled-components';
 
@@ -10,14 +11,42 @@ export const Container = styled.div`
     background: ${(props) => props.theme.widgetsBackground};
     border-radius: 16px;
     padding: 20px;
+    height: 439px;
 
     ${mediaBreakpointDown('fhd')} {
         padding: 12px;
         margin-bottom: 12px;
+        height: 304px;
     }
 
     ${mediaBreakpointDown('xl')} {
         height: 291px;
+    }
+
+    ${mediaBreakpointDown('md')} {
+        height: 172px;
+    }
+`;
+
+export const WeatherLoader = styled(Loader)`
+    padding-top: 100px;
+    margin: 0 auto;
+
+    ${mediaBreakpointDown('md')} {
+        padding-top: 35px;
+    }
+
+    .lds-ring {
+        ${mediaBreakpointDown('fhd')} {
+            width: 70px;
+            height: 70px;
+        }
+        & > div {
+            ${mediaBreakpointDown('fhd')} {
+                width: 60px;
+                height: 60px;
+            }
+        }
     }
 `;
 
@@ -53,6 +82,7 @@ export const WeatherHeader = styled.div`
             ${mediaBreakpointDown('fhd')} {
                 width: 14px;
                 height: 14px;
+                margin-right: 8px;
             }
         }
     }
@@ -68,18 +98,33 @@ export const WeatherBody = styled.div`
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin-bottom: 82px;
+    margin-bottom: 66px;
 
     ${mediaBreakpointDown('fhd')} {
-        margin-bottom: 62px;
+        margin-bottom: 50px;
     }
 
-    & > p {
+    ${mediaBreakpointDown('md')} {
+        flex-direction: row;
+    }
+
+    & > div {
+        &:last-of-type {
+            display: flex;
+            flex-direction: column;
+            ${mediaBreakpointDown('md')} {
+                margin-left: 20px;
+            }
+        }
+    }
+
+    p {
         ${font('text4')};
         font-weight: 400;
         color: ${(props) => props.theme.color};
 
         &:first-of-type {
+            text-transform: capitalize;
             margin-bottom: 3px;
         }
     }
@@ -132,6 +177,10 @@ export const WeatherFooter = styled.div`
         flex-wrap: wrap;
     }
 
+    ${mediaBreakpointDown('md')} {
+        flex-wrap: nowrap;
+    }
+
     svg {
         width: 24px;
         height: 24px;
@@ -154,9 +203,18 @@ export const WeatherFooter = styled.div`
 
         ${mediaBreakpointDown('xl')} {
             margin-right: 12px;
+        }
 
-            &:last-of-type {
+        ${mediaBreakpointDown('md')} {
+            margin-right: 40px;
+        }
+
+        &:last-of-type {
+            ${mediaBreakpointDown('xl')} {
                 margin-top: 12px;
+            }
+            ${mediaBreakpointDown('md')} {
+                margin-top: 0px;
             }
         }
 

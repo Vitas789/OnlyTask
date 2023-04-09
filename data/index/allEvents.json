@@ -1,9 +1,9 @@
 {
     "events": [
         {
-            "title": "Евгений Чебатков1",
-            "date": "25 апреля, 19:00",
-            "place": "Зимний театр",
+            "title": "Моя Мишель",
+            "date": "1 апреля, 19:00",
+            "place": "Роза Холл",
             "picture": [
                 {
                     "src": "/images/image2.jpg"
@@ -11,55 +11,55 @@
             ]
         },
         {
-            "title": "Евгений Чебатков1",
-            "date": "25 апреля, 19:00",
-            "place": "Зимний театр",
+            "title": "Сочи Парк",
+            "date": "март — май",
+            "place": "Сочи Парк",
             "picture": [
                 {
-                    "src": "/images/image2.jpg"
+                    "src": "/images/image-3.jpg"
                 }
             ]
         },
         {
             "title": "Concord Orchestra. Симфоническое рок-шоу «Рождение мира»",
-            "date": "25 апреля, 19:00",
-            "place": "Зимний театр",
+            "date": "1 апреля, 19:00",
+            "place": "Роза Холл",
             "picture": [
                 {
-                    "src": "/images/image2.jpg"
+                    "src": "/images/image-4.jpg"
                 },
                 {
-                    "src": "/images/image1-1920.jpg"
+                    "src": "/images/image-4.jpg"
                 }
             ]
         },
         {
-            "title": "Евгений Чебатков1",
-            "date": "25 апреля, 19:00",
-            "place": "Зимний театр",
+            "title": "Конные прогулки по живописным местам Адлера",
+            "date": "март — июнь",
+            "place": "Конные прогулки по живописным местам Адлера",
             "picture": [
                 {
-                    "src": "/images/image2.jpg"
+                    "src": "/images/image-5.jpg"
                 }
             ]
         },
         {
-            "title": "Евгений Чебатков1",
-            "date": "25 апреля, 19:00",
-            "place": "Зимний театр",
+            "title": "«Золотое кольцо Абхазии»: Гагры, Рица, Новый Афон",
+            "date": "апрель — июнь",
+            "place": "Золотое кольцо Абхазии",
             "picture": [
                 {
-                    "src": "/images/image2.jpg"
+                    "src": "/images/image-6.jpg"
                 }
             ]
         },
         {
-            "title": "Евгений Чебатков1",
-            "date": "25 апреля, 19:00",
-            "place": "Зимний театр",
+            "title": "New Star Camp. L’One",
+            "date": "1 апреля, 19:00",
+            "place": "Аллея флагов",
             "picture": [
                 {
-                    "src": "/images/image2.jpg"
+                    "src": "/images/image-7.jpg"
                 }
             ]
         }

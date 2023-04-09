@@ -1,15 +1,15 @@
 import React from 'react';
 import { Container } from './AllEvents.styled';
 import EventCard from '@/components/blocks/EventCard/EventCard';
+import { IAllEventsProps } from '@/interfaces';
 
-interface AllEventsProps {
-    events?: any;
+interface AllEventsProps extends IAllEventsProps {
 }
 
 const AllEvents: React.FC<AllEventsProps> = ({ events }) => {
     return (
         <Container>
-            {events.map((item: any, index: number) => (
+            {events && events.map((item: any, index: number) => (
                 <EventCard key={index} type="small" {...item} />
             ))}
         </Container>

@@ -22,8 +22,8 @@ export interface BasePageProps {
     sandwich: SandwichProps;
 }
 
-export interface MainLeadProps {
-    slides: {
+export interface IMainLeadProps {
+    slides?: {
         title: string;
         description: string;
         date: string;
@@ -35,7 +35,7 @@ export interface MainLeadProps {
 }
 
 export interface IAllEventsProps {
-    events: {
+    events?: {
         title: string;
         date: string;
         place: string;
@@ -48,6 +48,12 @@ export interface IAllEventsProps {
 export interface ITheme {
     backgroundColor: string;
     color: string;
+}
+
+export interface IWeatherData {
+    dt: string;
+    main: any;
+    list: any;
 }
 
 /**

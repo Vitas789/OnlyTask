@@ -4,9 +4,9 @@ import EventCard from '@/components/blocks/EventCard/EventCard';
 import Slider from '@/components/common/Slider/Slider';
 import WeatherWidget from '@/components/blocks/WeatherWidget/WeatherWidget';
 import WidgetTheme from '@/components/blocks/WidgetTheme/WidgetTheme';
+import { IMainLeadProps } from '@/interfaces';
 
-interface MainLeadProps {
-    slides?: any;
+interface MainLeadProps extends IMainLeadProps {
 }
 
 const MainLead: React.FC<MainLeadProps> = ({ slides }) => {
@@ -15,7 +15,7 @@ const MainLead: React.FC<MainLeadProps> = ({ slides }) => {
             <h1>Ближайшие мероприятия</h1>
             <CardContainer>
                 <Slider>
-                    {slides.map((item: any, index: number) => (
+                    {slides && slides.map((item: any, index: number) => (
                         <SwiperSlide key={index}>
                             <EventCard {...item} />
                         </SwiperSlide>

@@ -20,6 +20,14 @@ export const Container = styled.div`
     & > div {
         margin-bottom: 80px;
 
+        ${mediaBreakpointDown('fhd')} {
+            margin-bottom: 60px;
+        }
+
+        ${mediaBreakpointDown('xl')} {
+            margin-bottom: 28px;
+        }
+
         &:nth-child(3n + 2) {
             margin-left: 40px;
             margin-right: 40px;
@@ -39,6 +47,10 @@ export const Container = styled.div`
             ${mediaBreakpointDown('xl')} {
                 margin-left: 20px;
                 margin-right: 0px;
+            }
+
+            ${mediaBreakpointDown('md')} {
+                margin-left: 0px;
             }
         }
     }

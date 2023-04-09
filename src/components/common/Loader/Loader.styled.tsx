@@ -6,15 +6,15 @@ export const Container = styled.div`
     .lds-ring {
         display: inline-block;
         position: relative;
-        width: 80px;
-        height: 80px;
+        width: 120px;
+        height: 120px;
     }
     .lds-ring div {
         box-sizing: border-box;
         display: block;
         position: absolute;
-        width: 114px;
-        height: 114px;
+        width: 100px;
+        height: 100px;
         margin: 8px;
         border: 8px solid #157bfb;
         border-radius: 50%;

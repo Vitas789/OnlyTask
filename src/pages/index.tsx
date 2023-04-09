@@ -1,13 +1,13 @@
 import { GetStaticProps } from 'next';
 import React from 'react';
 import Layout from '@/components/common/Layout/Layout';
-import { IAllEventsProps, BasePageProps, MainLeadProps } from '@/interfaces';
+import { IAllEventsProps, BasePageProps, IMainLeadProps } from '@/interfaces';
 import { getAllEvents, getMainLead } from '@/lib/api';
 import MainLead from '@/components/sections/MainLead/MainLead';
 import AllEvents from '@/components/sections/AllEvents/AllEvents';
 
 interface IndexProps extends BasePageProps {
-    mainLead?: MainLeadProps;
+    mainLead?: IMainLeadProps;
     allEvents?: IAllEventsProps;
 }
 

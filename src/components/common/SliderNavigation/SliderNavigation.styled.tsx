@@ -21,6 +21,11 @@ export const Container = styled.div`
         top: 20px;
         right: 20px;
     }
+
+    ${mediaBreakpointDown('md')} {
+        top: 12px;
+        right: 12px;
+    }
 `;
 
 export const SliderNavigationButton = styled.div`
@@ -48,6 +53,10 @@ export const SliderNavigationButton = styled.div`
 
     &:first-of-type {
         margin-right: 10px;
+
+        ${mediaBreakpointDown('md')} {
+            margin-right: 8px;
+        }
     }
 
     svg {

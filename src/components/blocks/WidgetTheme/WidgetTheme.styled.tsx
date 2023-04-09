@@ -1,6 +1,40 @@
 import { font, mediaBreakpointDown } from '@/style/mixins';
 import styled from 'styled-components';
 
+export const Container = styled.div`
+    position: relative;
+    width: 100%;
+    background: ${(props) => props.theme.widgetsBackground};
+    border-radius: 16px;
+    padding: 20px;
+
+    ${mediaBreakpointDown('fhd')} {
+        padding: 12px;
+    }
+
+    ${mediaBreakpointDown('md')} {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    & > span {
+        display: block;
+        ${font('text5')}
+        color: ${(props) => props.theme.contrastColor};
+        font-weight: 500;
+        margin-bottom: 10px;
+
+        ${mediaBreakpointDown('fhd')} {
+            margin-bottom: 7px;
+        }
+
+        ${mediaBreakpointDown('md')} {
+            margin-bottom: 0px;
+        }
+    }
+`;
+
 export const WidgetThemeSwitcher = styled.div`
     position: relative;
     display: flex;
@@ -33,7 +67,7 @@ export const WidgetThemeSwitcher = styled.div`
             padding: 1px;
         }
 
-        ${mediaBreakpointDown('fhd')} {
+        ${mediaBreakpointDown('xl')} {
             width: 26px;
             height: 14px;
             padding: 1px;
@@ -54,7 +88,7 @@ export const WidgetThemeSwitcher = styled.div`
             height: 14px;
         }
 
-        ${mediaBreakpointDown('fhd')} {
+        ${mediaBreakpointDown('xl')} {
             width: 10px;
             height: 10px;
         }
@@ -77,30 +111,10 @@ export const WidgetThemeSwitcher = styled.div`
             ${mediaBreakpointDown('fhd')} {
                 transform: translate(14.5px);
             }
-        }
-    }
-`;
 
-export const Container = styled.div`
-    position: relative;
-    width: 100%;
-    background: ${(props) => props.theme.widgetsBackground};
-    border-radius: 16px;
-    padding: 20px;
-
-    ${mediaBreakpointDown('fhd')} {
-        padding: 12px;
-    }
-
-    & > span {
-        display: block;
-        ${font('text5')}
-        color: ${(props) => props.theme.contrastColor};
-        font-weight: 500;
-        margin-bottom: 10px;
-
-        ${mediaBreakpointDown('fhd')} {
-            margin-bottom: 7px;
+            ${mediaBreakpointDown('xl')} {
+                transform: translate(11px);
+            }
         }
     }
 `;
