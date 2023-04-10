@@ -9,7 +9,7 @@ interface AllEventsProps extends IAllEventsProps {
 const AllEvents: React.FC<AllEventsProps> = ({ events }) => {
     return (
         <Container>
-            {events && events.map((item: any, index: number) => (
+            {events && events.map((item, index) => (
                 <EventCard key={index} type="small" {...item} />
             ))}
         </Container>

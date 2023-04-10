@@ -8,6 +8,9 @@ interface WidgetThemeProps {
 
 const WidgetTheme: React.FC<WidgetThemeProps> = () => {
     const { theme, setTheme } = useContext(ThemeContext);
+
+    const onChange = () => setTheme(theme === 'light' ? 'dark' : 'light');
+
     return (
         <Container>
             <span>Переключение темы</span>
@@ -17,10 +20,10 @@ const WidgetTheme: React.FC<WidgetThemeProps> = () => {
                     <input
                         className="checkbox"
                         type="checkbox"
-                        checked={theme === 'light' ? false : true}
-                        onChange={() => setTheme(theme === 'light' ? 'dark' : 'light')}
+                        checked={theme !== 'light'}
+                        onChange={onChange}
                     />
-                    <span className="thumb"></span>
+                    <span className="thumb"/>
                 </div>
             </WidgetThemeSwitcher>
         </Container>

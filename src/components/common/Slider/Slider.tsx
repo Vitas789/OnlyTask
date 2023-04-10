@@ -32,7 +32,7 @@ const Slider: React.FC<SliderProps> = ({ children, navigation = true, swiperOpti
                     {children}
                 </SliderSwiper>
             </SliderWrapper>
-            {navigation && <SliderNavigation swiper={swiper} />}
+            {navigation && swiper && <SliderNavigation swiper={swiper} />}
         </Container>
     );
 };

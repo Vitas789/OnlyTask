@@ -28,7 +28,15 @@ export const Container = styled.div`
     }
 `;
 
-export const SliderNavigationButton = styled.div`
+interface SliderNavigationButtonProps {
+    isReverse?: boolean;
+}
+
+// В качестве альтернативы, можно использовать button вместо div
+export const SliderNavigationButton = styled.div.attrs(() => ({
+    tabIndex: 0,
+    role: 'button'
+}))<SliderNavigationButtonProps>`
     position: relative;
     width: 60px;
     height: 60px;
@@ -65,6 +73,7 @@ export const SliderNavigationButton = styled.div`
         height: 24px;
         top: 16px;
         left: 18px;
+        transform: scale(${({ isReverse }) => isReverse ? -1 : 1}, 1);
 
         ${mediaBreakpointDown('fhd')} {
             width: 16px;

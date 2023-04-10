@@ -1,6 +1,7 @@
 import { mediaBreakpointDown } from '@/style/mixins';
 import styled from 'styled-components';
 
+// Интерактивная кнопка, такое лучше делать с помощью тега button или дополнять aria-атрибутами
 export const Container = styled.div`
     position: absolute;
     width: 60px;

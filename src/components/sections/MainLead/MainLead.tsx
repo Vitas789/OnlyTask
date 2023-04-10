@@ -15,7 +15,7 @@ const MainLead: React.FC<MainLeadProps> = ({ slides }) => {
             <h1>Ближайшие мероприятия</h1>
             <CardContainer>
                 <Slider>
-                    {slides && slides.map((item: any, index: number) => (
+                    {slides && slides.map((item, index) => (
                         <SwiperSlide key={index}>
                             <EventCard {...item} />
                         </SwiperSlide>
