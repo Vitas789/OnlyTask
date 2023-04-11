@@ -4,16 +4,19 @@ import Swiper from 'swiper';
 import NavigationIcon from '../../../icons/icon_spoiler.svg';
 
 interface SliderNavigationProps {
-    swiper?: Swiper;
+    swiper: Swiper;
 }
 
 const SliderNavigation: React.FC<SliderNavigationProps> = ({ swiper }) => {
+    const onPrevClick = () => swiper.slidePrev();
+    const onNextClick = () => swiper.slideNext();
+
     return (
         <Container>
-            <SliderNavigationButton onClick={() => swiper?.slidePrev()}>
-                <NavigationIcon className="reverse" />
+            <SliderNavigationButton onClick={onPrevClick} isReverse={true}>
+                <NavigationIcon />
             </SliderNavigationButton>
-            <SliderNavigationButton onClick={() => swiper?.slideNext()}>
+            <SliderNavigationButton onClick={onNextClick}>
                 <NavigationIcon />
             </SliderNavigationButton>
         </Container>

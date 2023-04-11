@@ -12,17 +12,17 @@ interface EventCardProps extends IMainLeadProps {
     picture: {
         src: string;
     }[];
-    type?: string;
+    type?: 'default' | 'small';
 }
 
-const EventCard: React.FC<EventCardProps> = ({ title, description, date, place, picture, type }) => {
+const EventCard: React.FC<EventCardProps> = ({ title, description, date, place, picture, type= 'default' }) => {
     const copyToClipboard = () => {
         navigator.clipboard.writeText(`${title}, ${description || ''} ${date}`);
     };
     return (
-        <Container className={type || ''}>
-            <EventCardBg className={type || ''}>
-                {type && <EventCardCopyLink onClickFunc={copyToClipboard} className={type || ''} />}
+        <Container type={type}>
+            <EventCardBg type={type}>
+                {type && <EventCardCopyLink onClickFunc={copyToClipboard} type={type} />}
                 {picture.length < 2 ? (
                     <EventCardBgImg src={picture[0].src} alt="" layout="fill" objectFit="cover" />
                 ) : (
@@ -43,7 +43,7 @@ const EventCard: React.FC<EventCardProps> = ({ title, description, date, place, 
             </EventCardBg>
             <EventCardBody className={type || ''}>
                 <div>
-                    {!type && <EventCardCopyLink onClickFunc={copyToClipboard} className={type || ''} />}
+                    {!type && <EventCardCopyLink onClickFunc={copyToClipboard} type={type} />}
                     <p>{title}</p>
                     {description && <span>{description}</span>}
                     <EventCardPlace className={type || ''}>

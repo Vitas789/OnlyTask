@@ -14,11 +14,10 @@ const WeatherWidget: React.FC<WeatherWidgetProps> = () => {
     const [currentWeather, setCurrentWeather] = useState<any>([]);
     const date = new Date().getDate();
     const API = 'cf0fb975d915c2a3c341e4965b6c219d';
-    const { data, error } = useSWR<any>(
+    const { data, isLoading } = useSWR<any>(
         `http://api.openweathermap.org/data/2.5/forecast?q=Sochi&cnt=4&appid=${API}&units=metric&lang=ru`,
         fetcher
     );
-    const isLoading = !data && !error;
 
     useEffect(() => {
         if (data?.list) {
